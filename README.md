@@ -1,34 +1,31 @@
-Navigation for Neftlix React
+### Description
+Route Navigation for Neftlix React
 
-In this exercise you will apply your new knowledge about the react-router-dom
-to your Netflix app. Remember to install the npm package with "npm i react-router-dom"
+Knowledge about the `react-router-dom` to your Netflix app. 
+Remember to install the npm package with `npm i react-router-dom``
 
-         1. Create a Route for a "TVShows" component.
-            A simple static route, without parameters.
-            Mount a component of your choice on this page. Ex. "/tv-shows"
-         2 Add a Link to the "TVShows" page in the application's Navbar, to navigate through it conveniently.
-         3. Create a parametric route to mount a "MovieDetails" component.
-            It should allow to receive an id parameter from the URL. Ex. /movie-details/:movieId
-         4. Create MovieDetails component to display individual movie details and comments. This information will have to be fetched every time the MovieDetails component is mounted; you will need to fetch the movieId from the URL (to retrieve both the movie details and its comments you will need to perform two fetches: one to omdbAPI and one to our internal API)
-         In each SingleMovie component add a button; it will be used to navigate to its detail page, using the parametric route created above. Enter the movie id in the URL.
+1. Create a Route for a `TVShows` component. A simple static route, without parameters.
+   Mount a component of your choice on this page. Ex. `/tv-shows`;
+
+2 Add a Link to the `TVShows` page in the application's Navbar, to navigate through it conveniently;
+
+3. Create a parametric route to mount a `MovieDetails` component.
+   It should allow to receive an id parameter from the URL. Ex. /movie-details/:movieId
+
+4. Create `MovieDetails` component to display individual movie details and comments. This information will have to be fetched every time the MovieDetails component is mounted; you will need to fetch the movieId from the URL (to retrieve both the movie details and its comments you will need to perform two fetches: one to omdbAPI and one to our internal API). In each `SingleMovie` component add a button; it will be used to navigate to its detail page, using the parametric route created above. Enter the movie id in the URL.
     
-EXTRA
-         5. Change the behavior of the SearchBar: if the user is on the TVShows page, the placeholder should become: "Search TV Series..."
-         If you haven't already, improve your browsing by adding loaders and error handling
+5. Change the behavior of the SearchBar: if the user is on the TVShows page, the placeholder should become: "Search TV Series..."
+   If you haven't already, improve your browsing by adding loaders and error handling
 
-
-API Docs:
-
+### API Docs:
 OMDB file
 Register at http://www.omdbapi.com/
-
 Once done you will receive an email with your API Key.
-
 The endpoint to obtain the details of a film will be as follows:
 
-     http://www.omdbapi.com/?apikey=[PUT_YOUR_API_KEY_HERE]&i=tt0241527
+http://www.omdbapi.com/?apikey=[PUT_YOUR_API_KEY_HERE]&i=tt0241527
 
-     The call returns an object similar to this:
+The call returns an object similar to this:
 
      {
          "Title": "Harry Potter and the Sorcerer's Stone",
@@ -72,20 +69,19 @@ The endpoint to obtain the details of a film will be as follows:
      }
 
      
+### COMMENTS
 
-     COMMENTS
+Do you have a CRUD endpoint for comments on:
 
-     Do you have a CRUD endpoint for comments on:
+https://striveschool-api.herokuapp.com/api/comments/
 
-     https://striveschool-api.herokuapp.com/api/comments/
+This means you can GET, DELETE, POST, PUT data from there.
 
-     This means you can GET, DELETE, POST, PUT data from there.
+### ❗❗❗ IMPORTANT ❗❗❗
+You will need to use Authentication headers
+get a new token at https://strive.school/studentlogin if the previous one has expired)
 
-     ❗❗❗ IMPORTANT ❗❗❗
-     You will need to use Authentication headers
-     (get a new token at https://strive.school/studentlogin if the previous one has expired)
-
-     The comment is structured as an object in this way:
+The comment is structured as an object in this way:
 
      {
        "comment": string
@@ -107,7 +103,7 @@ The endpoint to obtain the details of a film will be as follows:
      }
 
      
-WARNING
+### WARNING
 Do a GET on
 https://striveschool-api.herokuapp.com/api/comments/
 will return ALL comments to database.
@@ -121,11 +117,10 @@ Example:
 https://striveschool-api.herokuapp.com/api/comments/tt0076759 will find the comments of a single movie.
 
 
-// TERMINAL
-// npm i bootstrap@4.6.1
-// npm i react-bootstrap@1.6.5
-// npm i react-router-dom
-
+### Terminal Command
+- `npm i bootstrap@4.6.1`;
+- `npm i react-bootstrap@1.6.5`;
+- `npm i react-router-dom`
 
 
 
